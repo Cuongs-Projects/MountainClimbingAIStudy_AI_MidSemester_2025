@@ -6,53 +6,55 @@ The project explores morphological evolution, articulation control, and bio-insp
 
     Project Tasks & Features:
 
-        Environment Setup and Simulation:
+        - Environment Setup and Simulation:
 
-        Implements a mountain environment (19x19x7 m) within PyBullet to require genuine climbing behaviour.
+            * Implements a mountain environment (19x19x7 m) within PyBullet to require genuine climbing behaviour.
 
-        Includes fitness functions rewarding proximity to the peak, stability, and later penalising undesirable non-climbing strategies.
+            * Includes fitness functions rewarding proximity to the peak, stability, and later penalising undesirable non-climbing strategies.
 
-        Genetic Algorithm Framework:
+        - Genetic Algorithm Framework:
 
-        Population-based evolution with elitism strategy to preserve fittest creatures.
+            * Population-based evolution with elitism strategy to preserve fittest creatures.
 
-        Parameter tuning experiments covering:
+        - Parameter tuning experiments covering:
 
-            Gene Count (number of initial body links)
+            * Gene Count (number of initial body links)
 
-            Point Mutation Rate (PMR)
+            * Point Mutation Rate (PMR)
 
-            Grow and Shrink Mutation Rates (GMR, SMR)
+            * Grow and Shrink Mutation Rates (GMR, SMR)
 
-            Limb Shape Encoding (cuboid, cylinder, sphere, evolving shapes)
+            * Limb Shape Encoding (cuboid, cylinder, sphere, evolving shapes)
 
-            Joint Axis Encoding (fixed vs evolving)
+            * Joint Axis Encoding (fixed vs evolving)
 
-            Commanded Force parameter
+            * Commanded Force parameter
 
-        Final tuned configuration employed a population size of 100, gene_count=2, PMR=0.05, SMR=0.3, GMR=0.15, evolving limb shapes and joint axes, and force=10.
+        - Final tuned configuration employed a population size of 100, gene_count=2, PMR=0.05, SMR=0.3, GMR=0.15, evolving limb shapes and joint axes, and force=10.
 
-        Morphological Evolution Experiments:
+        - Morphological Evolution Experiments:
 
-        Analysed effects of different limb shapes on performance and exploit emergence.
+            * Analysed effects of different limb shapes on performance and exploit emergence.
 
-        Investigated articulation flexibility versus structural compensation (fixed axes leading to “bushy” creatures).
+            * Analysed effects of different limb shapes on performance and exploit emergence.
+            Investigated articulation flexibility versus structural compensation (fixed axes leading to “bushy” creatures).
 
-        Extension Model – Bio-Inspired Enhancements:
+        - Extension Model 
+            * Bio-Inspired Enhancements, Bilateral Symmetry:
 
-        Bilateral symmetry enforcement to constrain morphological growth towards structured, physically plausible body plans.
+                - Enforcement to constrain morphological growth towards structured, physically plausible body plans.
 
-        Reactive touch sensors enabling sensory-motor coupling:
+            * Reactive touch sensors enabling sensory-motor coupling:
 
-            Limbs push away when contact is detected, transforming control from blind wiggling to reactive climbing attempts.
+                - Limbs push away when contact is detected, transforming control from blind wiggling to reactive climbing attempts.
 
-        Disabled sphere limbs to prevent rolling exploits and extended simulation time for evaluation.
+            * Disabled sphere limbs to prevent rolling exploits and extended simulation time for evaluation.
 
-        Simulation and Visualisation:
+        - Simulation and Visualisation:
 
-        Each creature’s URDF is dynamically saved and loaded with error handling.
+            * Each creature’s URDF is dynamically saved and loaded with error handling.
 
-        Simulations demonstrate evolved climbing, sideways exploit strategies, and structural adaptations.
+            * Simulations demonstrate evolved climbing, sideways exploit strategies, and structural adaptations.
 
     Technologies Used:
 
